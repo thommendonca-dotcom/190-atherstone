@@ -1,0 +1,30 @@
+﻿# Anti-Gravity Standard Ignore
+.antigravity/
+.gemini/
+.agent/
+.opencode/
+
+# Development
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+config.json
+
+
+# Logs and Debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and Cleanup
+.DS_Store
+Thumbs.db
+PATH_BACKUP_*.txt
+Cleanup_Python.ps1
+Link_Global_Skills.ps1
+Organize_Images.ps1
+Link_Global_Skills.ps1
