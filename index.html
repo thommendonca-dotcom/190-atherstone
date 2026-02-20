@@ -128,7 +128,11 @@
         box-sizing: border-box;
       }
 
+      html,
       body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
         margin: 0;
         background: var(--bg);
         color: var(--text);
@@ -394,6 +398,16 @@
         justify-content: space-between;
       }
 
+      .premium-upgrades-box {
+        background: var(--card);
+        padding: 60px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin-bottom: 60px;
+        margin-left: -80px;
+        margin-right: -80px;
+      }
+
       /* ==============================
    RESPONSIVE
 ============================== */
@@ -435,6 +449,12 @@
 
         .modal-content h2 {
           font-size: 1.5rem;
+        }
+
+        .premium-upgrades-box {
+          margin-left: 0;
+          margin-right: 0;
+          padding: 30px 20px;
         }
       }
 
@@ -1130,17 +1150,7 @@
           </div>
         </div>
 
-        <div
-          style="
-            background: var(--card);
-            padding: 60px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 60px;
-            margin-left: -80px;
-            margin-right: -80px;
-          "
-        >
+        <div class="premium-upgrades-box">
           <h3
             style="font-size: 1.8rem; margin-bottom: 25px; text-align: center"
           >
