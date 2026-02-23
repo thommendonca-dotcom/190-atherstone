@@ -1406,20 +1406,18 @@
   <!-- WebMCP: AI Agent Integration for Chrome Canary >> -->
   <script>
     if ("modelContext" in navigator) {
-      navigator.modelContext.registerTool(
-        {
-          name: "schedule_tour",
-          description: "Schedule a tour for the 190 Atherstone St property.",
-          schema: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              email: { type: "string" }
-            },
-            required: ["name", "email"]
-          }
+      navigator.modelContext.registerTool({
+        name: "schedule_tour",
+        description: "Schedule a tour for the 190 Atherstone St property.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            name: { type: "string" },
+            email: { type: "string" }
+          },
+          required: ["name", "email"]
         },
-        async (params) => {
+        execute: async (params) => {
           // Automatically open the Lead Capture Modal
           const modal = document.querySelector('.modal-overlay');
           if (modal) {
@@ -1436,7 +1434,7 @@
             text: `Tour scheduling interface successfully opened. Details logged for Name: ${params.name}, Email: ${params.email}`
           };
         }
-      );
+      });
     }
   </script>
 </body>
