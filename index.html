@@ -1258,7 +1258,8 @@
         Fill out the form below and we'll get back to you within 24 hours.
       </p>
 
-      <form action="https://formspree.io/f/xbjnqjpz" method="POST">
+      <form action="https://formspree.io/f/xbjnqjpz" method="POST" toolname="schedule_tour"
+        tooldescription="Schedule a tour for the 190 Atherstone St property.">
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="name" placeholder="John Doe" required />
@@ -1403,44 +1404,6 @@
     });
   </script>
 
-  <!-- WebMCP: AI Agent Integration for Chrome Canary >> -->
-  <script>
-    const webmcp = navigator.modelContextTesting || navigator.modelContext;
-    if (webmcp) {
-      webmcp.registerTool({
-        name: "schedule_tour",
-        description: "Schedule a tour for the 190 Atherstone St property.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            name: { type: "string", description: "The full name of the person scheduling the tour." },
-            email: { type: "string", description: "The email address of the person scheduling the tour." }
-          },
-          required: ["name", "email"]
-        },
-        execute: async (params) => {
-          // Automatically open the Lead Capture Modal
-          const modal = document.querySelector('.modal-overlay');
-          if (modal) {
-            modal.style.display = 'flex';
-
-            // We could also populate form fields if present
-            const nameInput = document.querySelector('input[name="full_name"]');
-            const emailInput = document.querySelector('input[name="email"]');
-            if (nameInput) nameInput.value = params.name || '';
-            if (emailInput) emailInput.value = params.email || '';
-          }
-
-          return {
-            content: [{
-              type: "text",
-              text: `Tour scheduling interface successfully opened. Details logged for Name: ${params.name}, Email: ${params.email}`
-            }]
-          };
-        }
-      });
-    }
-  </script>
 </body>
 
 </html>
