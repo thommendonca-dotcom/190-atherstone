@@ -1405,15 +1405,16 @@
 
   <!-- WebMCP: AI Agent Integration for Chrome Canary >> -->
   <script>
-    if ("modelContext" in navigator) {
-      navigator.modelContext.registerTool({
+    const webmcp = navigator.modelContextTesting || navigator.modelContext;
+    if (webmcp) {
+      webmcp.registerTool({
         name: "schedule_tour",
         description: "Schedule a tour for the 190 Atherstone St property.",
         inputSchema: {
           type: "object",
           properties: {
-            name: { type: "string" },
-            email: { type: "string" }
+            name: { type: "string", description: "The full name of the person scheduling the tour." },
+            email: { type: "string", description: "The email address of the person scheduling the tour." }
           },
           required: ["name", "email"]
         },
@@ -1431,7 +1432,10 @@
           }
 
           return {
-            text: `Tour scheduling interface successfully opened. Details logged for Name: ${params.name}, Email: ${params.email}`
+            content: [{
+              type: "text",
+              text: `Tour scheduling interface successfully opened. Details logged for Name: ${params.name}, Email: ${params.email}`
+            }]
           };
         }
       });
