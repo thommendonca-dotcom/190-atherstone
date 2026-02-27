@@ -11,7 +11,17 @@
   <!-- Typography Enhancement -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Preload fonts to avoid render-blocking (FCP optimization) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="images/final/front-streeview.webp" fetchpriority="high" />
 
   <!-- Structured Data: Real Estate Listing -->
   <script type="application/ld+json">
@@ -680,7 +690,7 @@
               height: 100%;
               object-fit: cover;
               cursor: pointer;
-            " onclick="openLightbox(0)" class="gallery-trigger" />
+            " onclick="openLightbox(0)" class="gallery-trigger" fetchpriority="high" decoding="async" />
       </div>
     </div>
   </section>
@@ -698,7 +708,7 @@
               object-fit: cover;
               border-radius: var(--radius);
               cursor: pointer;
-            " onclick="openLightbox(2)" class="gallery-trigger" />
+            " onclick="openLightbox(2)" class="gallery-trigger" loading="lazy" decoding="async" />
         <div class="overlay-plus" onclick="openLightbox(2)">+</div>
         <div style="
               position: absolute;
@@ -761,7 +771,7 @@
               object-fit: cover;
               border-radius: var(--radius);
               cursor: pointer;
-            " onclick="openLightbox(3)" class="gallery-trigger" />
+            " onclick="openLightbox(3)" class="gallery-trigger" loading="lazy" decoding="async" />
         <div class="overlay-plus" style="top: auto; bottom: 24px; left: 24px; right: auto" onclick="openLightbox(3)">
           +
         </div>
@@ -792,7 +802,7 @@
               object-fit: cover;
               border-radius: var(--radius);
               cursor: pointer;
-            " onclick="openLightbox(7)" class="gallery-trigger" />
+            " onclick="openLightbox(7)" class="gallery-trigger" loading="lazy" decoding="async" />
         <div class="overlay-plus" style="top: auto; bottom: 24px; left: 24px; right: auto" onclick="openLightbox(7)">
           +
         </div>
@@ -844,7 +854,7 @@
                 object-fit: cover;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
-              " />
+              " loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -856,7 +866,7 @@
                 object-fit: cover;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
-              " />
+              " loading="lazy" decoding="async" />
         </div>
         <div style="flex: 1">
           <h3 style="font-size: 1.8rem; margin-bottom: 15px">
@@ -904,7 +914,7 @@
                   object-fit: cover;
                   border-radius: var(--radius);
                   box-shadow: var(--shadow);
-                " />
+                " loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -917,7 +927,7 @@
                 object-fit: cover;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
-              " />
+              " loading="lazy" decoding="async" />
         </div>
         <div style="flex: 1">
           <h3 style="font-size: 1.8rem; margin-bottom: 15px">
@@ -976,7 +986,7 @@
                 object-fit: cover;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
-              " />
+              " loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -988,7 +998,7 @@
                 object-fit: cover;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
-              " />
+              " loading="lazy" decoding="async" />
         </div>
         <div style="flex: 1">
           <h3 style="font-size: 1.8rem; margin-bottom: 15px">
@@ -1027,7 +1037,7 @@
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
                 cursor: pointer;
-              " />
+              " loading="lazy" decoding="async" />
         </div>
       </div>
 
