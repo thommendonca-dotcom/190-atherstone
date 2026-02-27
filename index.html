@@ -432,6 +432,10 @@
         height: 350px;
       }
 
+      .card {
+        min-height: 250px !important;
+      }
+
       .nav-links {
         display: none;
       }
@@ -441,8 +445,28 @@
         gap: 40px !important;
       }
 
-      .concept-grid .concept-text {
-        order: -1;
+      .concept-grid> :nth-child(1) {
+        order: 2;
+      }
+
+      .concept-grid> :nth-child(2) {
+        order: 1;
+      }
+
+      .concept-grid> :nth-child(3) {
+        order: 3;
+      }
+
+      .concept-grid> :nth-child(4) {
+        order: 5;
+      }
+
+      .concept-grid> :nth-child(5) {
+        order: 4;
+      }
+
+      .concept-grid> :nth-child(6) {
+        order: 6;
       }
 
       .modal-content {
@@ -842,6 +866,31 @@
             </p>
           </div>
         </div>
+
+        <div class="concept-text"
+          style="display: flex; flex-direction: column; justify-content: flex-start; height: 100%; padding-top: 10px;">
+          <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin-top: 0; margin-bottom: 20px; line-height: 1.15;">
+            An Entertainer's Dream
+          </h2>
+          <p style="margin-bottom: 0;">
+            As you step inside, flawless, easy-care flooring draws you into a breathtaking Great Room, elegantly
+            anchored by a magnificent 36-inch gas fireplace. The energy here is warm, bright, and inviting, flowing
+            seamlessly into the Kitchen and Breakfast Room.
+          </p>
+        </div>
+
+        <div class="concept-text"
+          style="display: flex; flex-direction: column; justify-content: flex-start; height: 100%; padding-top: 10px;">
+          <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin-top: 0; margin-bottom: 20px; line-height: 1.15;">
+            A Gourmet Kitchen
+          </h2>
+          <p style="margin-bottom: 0;">
+            Your inner chef will be absolutely thrilled by this gourmet space! It boasts gleaming granite countertops,
+            chic modern white cabinets, and a massive center island complete with a timeless white ceramic farmhouse
+            sink. Paired with top-of-the-line stainless steel appliances—including a precision GE Gas stove—this kitchen
+            is ready for your grandest culinary creations.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -850,52 +899,6 @@
 ========================================= -->
     <section>
       <div class="container" style="max-width: 900px">
-        <div class="details-flex" style="align-items: center; gap: 40px; margin-bottom: 80px">
-          <div style="flex: 1">
-            <h2 style="margin-bottom: 15px">An Entertainer's Dream</h2>
-            <p style="font-size: 1.1rem; line-height: 1.6">
-              As you step inside, flawless, easy-care flooring draws you into a
-              breathtaking Great Room, elegantly anchored by a magnificent
-              36-inch gas fireplace. The energy here is warm, bright, and
-              inviting, flowing seamlessly into the Kitchen and Breakfast Room.
-            </p>
-          </div>
-          <div style="flex: 1">
-            <img src="images/enhanced/indoor/living-room-1.webp" alt="Great Room" style="
-                width: 100%;
-                height: 350px;
-                object-fit: cover;
-                border-radius: var(--radius);
-                box-shadow: var(--shadow);
-              " loading="lazy" decoding="async" />
-          </div>
-        </div>
-
-        <div class="details-flex" style="align-items: center; gap: 40px; margin-bottom: 80px">
-          <div style="flex: 1">
-            <img src="images/enhanced/indoor/kitchen-2.webp" alt="Gourmet Kitchen" style="
-                width: 100%;
-                height: 350px;
-                object-fit: cover;
-                border-radius: var(--radius);
-                box-shadow: var(--shadow);
-              " loading="lazy" decoding="async" />
-          </div>
-          <div style="flex: 1">
-            <h3 style="font-size: 1.8rem; margin-bottom: 15px">
-              A Gourmet Kitchen
-            </h3>
-            <p style="font-size: 1.1rem; line-height: 1.6">
-              Your inner chef will be absolutely thrilled by this gourmet space!
-              It boasts gleaming granite countertops, chic modern white
-              cabinets, and a massive center island complete with a timeless
-              white ceramic farmhouse sink. Paired with top-of-the-line
-              stainless steel appliances—including a precision GE Gas stove—this
-              kitchen is ready for your grandest culinary creations.
-            </p>
-          </div>
-        </div>
-
         <div style="
             background: var(--bg);
             padding: 60px 40px;
