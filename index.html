@@ -681,6 +681,10 @@
           Stunning design and modern comfort await at
           <span style="white-space: nowrap">190 Atherstone St</span>
         </h1>
+        <div
+          style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 700; color: var(--accent); margin-bottom: 30px; margin-top: -10px;">
+          $374,900
+        </div>
         <button onclick="toggleModal()" class="btn">
           Schedule a Tour &rarr;
         </button>
@@ -1226,6 +1230,22 @@
         </div>
       </div>
     </section>
+
+    <!-- =========================================
+     FLOOR PLAN
+  ========================================= -->
+    <section id="floor-plan" style="padding-bottom: 40px; padding-top: 20px;">
+      <div class="container" style="text-align: center;">
+        <h2 style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 30px;">Property Floor Plan</h2>
+        <img src="images/final/floor-plan.webp" alt="Property Floor Plan" style="
+              max-width: 100%;
+              height: auto;
+              border-radius: var(--radius);
+              box-shadow: var(--shadow);
+              cursor: pointer;
+            " onclick="openLightbox(25)" class="gallery-trigger" loading="lazy" decoding="async" />
+      </div>
+    </section>
   </main>
 
   <!-- =========================================
@@ -1378,6 +1398,7 @@
       { src: "images/final/shed-1.webp", title: "Workshop/Shed" },
       { src: "images/enhanced/indoor/shed-1a.webp", title: "Workshop/Shed" },
       { src: "images/final/community-pool.webp", title: "Community Pool" },
+      { src: "images/final/floor-plan.webp", title: "Floor Plan" },
     ];
 
     let currentImageIndex = 0;
